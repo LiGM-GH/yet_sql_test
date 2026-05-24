@@ -119,3 +119,42 @@ INSERT INTO
   )
 VALUES
   (2, NOW (), 'A', '02', 25000, 2);
+
+INSERT INTO
+  cards_info (
+    application_id,
+    application_date,
+    application_status,
+    card_type,
+    card_limit,
+    customer_id
+  )
+VALUES
+  (3, NOW (), 'A', '02', 31000, 2);
+
+INSERT INTO
+  Credit_Info (
+    credit_id,
+    issue_date,
+    customer_id,
+    loan_amount,
+    currency,
+    credit_type,
+    credit_status,
+    term,
+    action_type,
+    shop_name
+  )
+VALUES
+  (
+    0,
+    NOW (),
+    2,
+    100001,
+    1,
+    'потребительский',
+    '1',
+    25,
+    '1234567890',
+    'First Shop'
+  );

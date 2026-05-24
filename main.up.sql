@@ -40,14 +40,14 @@ CREATE TABLE Credit_Info (
   credit_type VARCHAR(20),
   credit_status CHAR(1),
   term INTEGER,
-  action_type CHAR(100), -- for instance
+  action_type CHAR(10), -- for instance
   shop_name VARCHAR(200)
 );
 
 CREATE TABLE Payments_Info (
   ID INTEGER PRIMARY KEY,
   credit_id INTEGER REFERENCES Credit_Info (credit_id),
-  num_installment CHAR(100), -- for instance
+  num_installment CHAR(10), -- for instance
   payment_date DATE,
   delay_days INTEGER,
   payment_amount INTEGER
