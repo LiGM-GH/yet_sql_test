@@ -1,4 +1,3 @@
-
 -- The longest known name of a currency is "Pound sterling" - 14 characters.
 -- Safe to assume no currency is longer than 30 characters.
 CREATE TABLE currency_rates (
@@ -43,4 +42,13 @@ CREATE TABLE Credit_Info (
   term INTEGER,
   action_type CHAR(100), -- for instance
   shop_name VARCHAR(200)
+);
+
+CREATE TABLE Payments_Info (
+  ID INTEGER PRIMARY KEY,
+  credit_id INTEGER REFERENCES Credit_Info (credit_id),
+  num_installment CHAR(100), -- for instance
+  payment_date DATE,
+  delay_days INTEGER,
+  payment_amount INTEGER
 );
