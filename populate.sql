@@ -158,3 +158,15 @@ VALUES
     '1234567890',
     'First Shop'
   );
+
+INSERT INTO
+  Payments_Info (
+    ID,
+    credit_id,
+    num_installment,
+    payment_date,
+    delay_days,
+    payment_amount
+  )
+VALUES
+  (0, 0, '1234567890', NOW (), 20, 10);
