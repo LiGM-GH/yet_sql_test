@@ -52,3 +52,12 @@ CREATE TABLE Payments_Info (
   delay_days INTEGER,
   payment_amount INTEGER
 );
+
+CREATE TABLE product_info (
+    ID INTEGER PRIMARY KEY,
+    product      VARCHAR(500),
+    brand        VARCHAR(200),
+    model        VARCHAR(500),
+    price        INTEGER,
+    credit_id    INTEGER REFERENCES Credit_Info (credit_id)
+);
