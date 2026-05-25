@@ -100,3 +100,21 @@ ORDER BY
   credits_num
 LIMIT
   15;
+
+CREATE FUNCTION credits_between (INTEGER, INTEGER) RETURNS INTEGER AS '
+SELECT
+  COUNT(loan_amount)
+FROM
+  Credit_Info
+WHERE
+  loan_amount >= $1
+  AND loan_amount < $2
+' LANGUAGE SQL;
+
+SELECT credits_between(0, 5000);
+SELECT credits_between(5000, 10000);
+SELECT credits_between(10000, 15000);
+SELECT credits_between(20000, 100000);
+SELECT credits_between(100000, 1000000);
+
+DROP FUNCTION credits_between;
