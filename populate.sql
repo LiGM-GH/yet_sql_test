@@ -160,6 +160,33 @@ VALUES
   );
 
 INSERT INTO
+  Credit_Info (
+    credit_id,
+    issue_date,
+    customer_id,
+    loan_amount,
+    currency,
+    credit_type,
+    credit_status,
+    term,
+    action_type,
+    shop_name
+  )
+VALUES
+  (
+    1,
+    NOW (),
+    1,
+    100001,
+    1,
+    'потребительский',
+    '1',
+    25,
+    '2345678901',
+    'Second Shop'
+  );
+
+INSERT INTO
   Payments_Info (
     ID,
     credit_id,
@@ -169,4 +196,4 @@ INSERT INTO
     payment_amount
   )
 VALUES
-  (0, 0, '1234567890', NOW (), 20, 10);
+  (0, 1, '1234567890', NOW (), 20, 10);
